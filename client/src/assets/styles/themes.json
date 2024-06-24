@@ -1,0 +1,222 @@
+{
+	"version": 1,
+	"themes": {
+		"blackboard": {
+			"name": "Blackboard",
+			"colors": {
+				"background": "#1a1a1a",
+				"primary": "#FFFDEA",
+				"accent": "#5c5c5c"
+			},
+			"isCustom": false
+		},
+		"gazette": {
+			"name": "Gazette",
+			"colors": {
+				"background": "#F2F7FF",
+				"primary": "#000000",
+				"accent": "#5c5c5c"
+			},
+			"isCustom": false
+		},
+		"latte": {
+			"name": "Latte",
+			"colors": {
+				"background": "#efe2d2",
+				"primary": "#442f19",
+				"accent": "#625346"
+			},
+			"isCustom": false
+		},
+		"armCoffee": {
+			"name": "Armenian Coffee",
+			"colors": {
+				"background": "#21211F",
+				"primary": "#D1B59A",
+				"accent": "#4E4E4E"
+			},
+			"isCustom": false
+		},
+		"cab": {
+			"name": "Cab",
+			"colors": {
+				"background": "#F6E335",
+				"primary": "#1F1F1F",
+				"accent": "#424242"
+			},
+			"isCustom": false
+		},
+		"cloud": {
+			"name": "Cloud",
+			"colors": {
+				"background": "#f5f4f3",
+				"primary": "#35342f",
+				"accent": "#17abc4"
+			},
+			"isCustom": false
+		},
+		"lime": {
+			"name": "Lime",
+			"colors": {
+				"background": "#263238",
+				"primary": "#AABBC3",
+				"accent": "#aeea00"
+			},
+			"isCustom": false
+		},
+		"white": {
+			"name": "White",
+			"colors": {
+				"background": "#ffffff",
+				"primary": "#222222",
+				"accent": "#999999"
+			},
+			"isCustom": false
+		},
+		"black": {
+			"name": "Black",
+			"colors": {
+				"background": "#000000",
+				"primary": "#eeeeee",
+				"accent": "#999999"
+			},
+			"isCustom": false
+		},
+		"tron": {
+			"name": "Tron",
+			"colors": {
+				"background": "#242B33",
+				"primary": "#EFFBFF",
+				"accent": "#6EE2FF"
+			},
+			"isCustom": false
+		},
+		"blues": {
+			"name": "Blues",
+			"colors": {
+				"background": "#153243",
+				"primary": "#F4F9E9",
+				"accent": "#EEF0EB"
+			},
+			"isCustom": false
+		},
+		"passion": {
+			"name": "Passion",
+			"colors": {
+				"background": "#EAD7D7",
+				"primary": "#12005e",
+				"accent": "#8e24aa"
+			},
+			"isCustom": false
+		},
+		"chalk": {
+			"name": "Chalk",
+			"colors": {
+				"background": "#263238",
+				"primary": "#AABBC3",
+				"accent": "#FF869A"
+			},
+			"isCustom": false
+		},
+		"paper": {
+			"name": "Paper",
+			"colors": {
+				"background": "#F8F6F1",
+				"primary": "#4C432E",
+				"accent": "#AA9A73"
+			},
+			"isCustom": false
+		},
+		"neon": {
+			"name": "Neon",
+			"colors": {
+				"background": "#091833",
+				"primary": "#EFFBFF",
+				"accent": "#ea00d9"
+			},
+			"isCustom": false
+		},
+		"pumpkin": {
+			"name": "Pumpkin",
+			"colors": {
+				"background": "#2d3436",
+				"primary": "#EFFBFF",
+				"accent": "#ffa500"
+			},
+			"isCustom": false
+		},
+		"onedark": {
+			"name": "Onedark",
+			"colors": {
+				"background": "#282c34",
+				"primary": "#dfd9d6",
+				"accent": "#98c379"
+			},
+			"isCustom": false
+		},
+		"mint": {
+			"name": "Mint",
+			"colors": {
+				"background": "#282525",
+				"primary": "#d9d9d9",
+				"accent": "#50fbc2"
+			},
+			"isCustom": false
+		},
+		"vampire": {
+			"name": "Vampire",
+			"colors": {
+				"background": "#1A1D1A",
+				"primary": "#B6382D",
+				"accent": "#8E342C"
+			},
+			"isCustom": false
+		},
+		"forest": {
+			"name": "Forest",
+			"colors": {
+				"background": "#1F3833",
+				"primary": "#DDD5D0",
+				"accent": "#AD9A95"
+			},
+			"isCustom": false
+		},
+		"plum": {
+			"name": "Plum",
+			"colors": {
+				"background": "#1C191C",
+				"primary": "#f7e6f6",
+				"accent": "#A03E99"
+			},
+			"isCustom": false
+		},
+		"timberwolf": {
+			"name": "Timberwolf",
+			"colors": {
+				"background": "#D4D4D4",
+				"primary": "#0C1713",
+				"accent": "#4c4c4c"
+			},
+			"isCustom": false
+		},
+		"roseQuartz": {
+			"name": "Rose Quartz",
+			"colors": {
+				"background-old": "#EAC9C1",
+				"background": "#fae0d9",
+				"primary": "#30332E",
+				"accent": "#4c4c4c"
+			},
+			"isCustom": false
+		},
+		"khaki": {
+			"name": "Khaki",
+			"colors": {
+				"background": "#aaa694",
+				"primary": "#001514",
+				"accent": "#50413E"
+			},
+			"isCustom": false
+		}
+	}
+}
