@@ -11,6 +11,7 @@ import './assets/styles/main.css';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+
 const router = createBrowserRouter([
 	{
 		path: '/',
@@ -24,14 +25,27 @@ const router = createBrowserRouter([
 			{
 				index: true,
 				element: <pages.Homepage />,
-			}
+			},
+			{
+				path: 'collection/:collectionName',
+				element: (
+					<pages.Collection/>
+				)
+			},
+			{
+				path: 'addcollection',
+				element: <pages.AddCollection />,
+			},
+			{
+				path: '*',
+				element: <pages.Error404 />,
+			},
 		],
 	},
 ]);
 
 function App() {
 	return <RouterProvider router={router} />;
-	// return <pages.Homepage />;
 }
 
 export default App;

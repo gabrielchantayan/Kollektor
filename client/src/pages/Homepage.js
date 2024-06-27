@@ -17,9 +17,9 @@ export default function PageOne(params) {
 		<div id="collectionList">
 			<ul>
 
-				<li><IconLink icon='mdi:home' string='Home' url='/' /></li>
-				<li><IconLink icon='mdi:coin' string='Coins' url='/' /></li>
-				<li><IconLink icon='mdi:banknote' string="Banknotes" url='/' /></li>
+				<li><IconLink icon='mdi:coin' string='Coins' url='/collection/coins' /></li>
+				<li><IconLink icon='mdi:money' string="Banknotes" url='/collection/banknotes' /></li>
+				<li><IconLink icon='mdi:stamp' string='Stamps' url='/collection/stamps' /></li>
 
 			</ul>
 		</div>

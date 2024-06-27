@@ -437,6 +437,29 @@ table {
 	display: flex;
 	flex-direction: column;
 
+	&.small {
+		label {
+			font-size: 0.8em;
+			line-height: 0.8;
+
+			transform: translate(0, 18px) scale(1);
+			left: 0.8em;
+		}
+
+		input {
+			height: 1.6em;
+			padding: 1.5em 1em 0.25em 1em;
+			font-size: 0.8em;
+			line-height: 0.8;
+		}
+
+		.filled,
+		&:focus-within label {
+			transform: translate(0, 12px) scale(0.8);
+			color: var(--color-accent);
+		}
+	}
+
 	label {
 		position: absolute;
 		pointer-events: none;
