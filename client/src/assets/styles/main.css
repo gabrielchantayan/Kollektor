@@ -55,6 +55,244 @@
   font-display: swap;
   src: url("fonts/PoltawskiNowy.woff2") format("woff2");
 }
+#modalToggleButton {
+  bottom: 2vh;
+  color: va(--color-accent);
+  left: 2.4vw;
+  position: fixed;
+}
+
+#modalToggleButtonIcon {
+  font-size: 2.5em;
+}
+
+#modalBackground {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  -webkit-backdrop-filter: blur(5px) brightness(60%);
+          backdrop-filter: blur(5px) brightness(60%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: scroll;
+  justify-content: center;
+  background-color: 0, 0, 0, 0.3;
+}
+
+#modal {
+  background-color: var(--color-background);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.25);
+  width: 50%;
+  flex-direction: column;
+  z-index: 999;
+  border-radius: 1em;
+}
+
+#modalHeader {
+  margin: 1em 2em 0em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-start;
+}
+#modalHeader .icon {
+  font-size: 1.5em;
+  margin-top: 1em;
+  margin-left: 0.5em;
+}
+
+#modalBody {
+  padding: 0 2em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 70vh;
+  overflow: scroll;
+  margin: auto;
+}
+#modalBody.center {
+  justify-content: center;
+  align-items: center;
+}
+#modalBody .adminLoginHeader {
+  margin: 0 0 0.3em 0;
+}
+
+#modalFooter {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  font-size: 2em;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0 0.5em 0;
+}
+#modalFooter .modalFooterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#modalFooter .icon {
+  font-size: 1em;
+  margin-left: 0.5em;
+}
+#modalFooter .modalFooterText {
+  margin: 0 0.3em 0 0.25em;
+  font-size: 0.5em;
+}
+
+#themeButtonSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#adminLoginScreen {
+  min-height: 15em;
+}
+
+.modalSectionHeader {
+  font-weight: 900;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  margin: 1em 0 0.2em 0;
+}
+
+.floatingLabelInputContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.floatingLabelInputContainer.small label {
+  font-size: 0.8em;
+  line-height: 0.8;
+  transform: translate(0, 18px) scale(1);
+  left: 0.8em;
+}
+.floatingLabelInputContainer.small input {
+  height: 1.6em;
+  padding: 1.5em 1em 0.25em 1em;
+  font-size: 0.8em;
+  line-height: 0.8;
+}
+.floatingLabelInputContainer.small .filled, .floatingLabelInputContainer.small:focus-within label {
+  transform: translate(0, 12px) scale(0.8);
+  color: var(--color-accent);
+}
+.floatingLabelInputContainer label {
+  position: absolute;
+  pointer-events: none;
+  transform: translate(0, 23px) scale(1);
+  transform-origin: top left;
+  transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  font-size: 1em;
+  line-height: 1;
+  left: 1em;
+}
+.floatingLabelInputContainer .filled, .floatingLabelInputContainer:focus-within label {
+  transform: translate(0, 12px) scale(0.8);
+  color: var(--color-accent);
+}
+.floatingLabelInputContainer input {
+  height: 2em;
+  padding: 1.5em 1em 0.25em 1em;
+  font-size: 1em;
+  line-height: 1;
+  transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.loadingBarContainer {
+  height: 0.3em;
+  border-radius: 0.4em;
+  min-width: 10em;
+  width: 100%;
+  overflow: hidden;
+}
+
+.loadingBarBackground {
+  height: 100%;
+  border-radius: 0.4em;
+  background-color: var(--color-primary);
+  opacity: 0.2;
+  min-width: 10em;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.loadingBarValue {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.4em;
+  background-color: var(--color-accent);
+  animation: indeterminateAnimation 1s infinite ease-in-out;
+  animation-direction: alternate;
+  transform-origin: 0% 50%;
+  position: relative;
+  top: -0.3em;
+  left: 0;
+}
+
+.statusMessage .result {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin: 0;
+}
+.statusMessage .message {
+  margin-top: 0;
+}
+
+.statusMessageContainer {
+  margin: 0.5em 0;
+  min-width: 18.75em;
+}
+
+@keyframes indeterminateAnimation {
+  0% {
+    transform: translateX(-15%) scaleX(0.25);
+  }
+  100% {
+    transform: translateX(90%) scaleX(0.55);
+  }
+}
+.dropboxContainer {
+  width: 100%;
+  border: 0.1em solid var(--color-accent);
+  border-radius: 0.4em;
+  margin: 0.4em;
+}
+.dropboxContainer .dropboxHeader {
+  font-size: 1.2em;
+  padding: 0.4em 0.6em;
+  font-weight: bold;
+  color: var(--color-accent);
+  position: relative;
+}
+.dropboxContainer .dropboxHeader::before {
+  content: ""; /* Create a pseudo-element */
+  position: absolute; /* Position the pseudo-element absolutely */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background);
+  filter: brightness(0.5);
+  opacity: 0.4; /* Apply opacity to the pseudo-element */
+  z-index: 0;
+}
+.dropboxContainer .dropboxHeader * {
+  position: relative;
+  z-index: 1;
+}
+.dropboxContainer .dropboxContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
 body {
   font-family: var(--font-stack), InterVariable, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, sans-serif;
   background-color: var(--color-background);
@@ -221,110 +459,6 @@ table th {
   margin-top: 2em;
 }
 
-#modalToggleButton {
-  bottom: 2vh;
-  color: va(--color-accent);
-  left: 2.4vw;
-  position: fixed;
-}
-
-#modalToggleButtonIcon {
-  font-size: 2.5em;
-}
-
-#modalBackground {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  -webkit-backdrop-filter: blur(5px) brightness(60%);
-          backdrop-filter: blur(5px) brightness(60%);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  overflow: scroll;
-  justify-content: center;
-  background-color: 0, 0, 0, 0.3;
-}
-
-#modal {
-  background-color: var(--color-background);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.25);
-  width: 50%;
-  flex-direction: column;
-  z-index: 999;
-  border-radius: 1em;
-}
-
-#modalHeader {
-  margin: 1em 2em 0em 2em;
-  display: flex;
-  justify-content: space-between;
-  align-self: flex-start;
-}
-#modalHeader .icon {
-  font-size: 1.5em;
-  margin-top: 1em;
-  margin-left: 0.5em;
-}
-
-#modalBody {
-  padding: 0 2em;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  max-height: 70vh;
-  overflow: scroll;
-  margin: auto;
-}
-#modalBody.center {
-  justify-content: center;
-  align-items: center;
-}
-#modalBody .adminLoginHeader {
-  margin: 0 0 0.3em 0;
-}
-
-#modalFooter {
-  margin: auto;
-  width: 100%;
-  display: flex;
-  font-size: 2em;
-  justify-content: center;
-  align-items: center;
-  margin: 1em 0 0.5em 0;
-}
-#modalFooter .modalFooterContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#modalFooter .icon {
-  font-size: 1em;
-  margin-left: 0.5em;
-}
-#modalFooter .modalFooterText {
-  margin: 0 0.3em 0 0.25em;
-  font-size: 0.5em;
-}
-
-#themeButtonSection {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-#adminLoginScreen {
-  min-height: 15em;
-}
-
-.modalSectionHeader {
-  font-weight: 900;
-  font-size: 1.4em;
-  text-transform: uppercase;
-  margin: 1em 0 0.2em 0;
-}
-
 .themeButton {
   font-size: 0.8em;
   margin: 0.2em 0.5em;
@@ -341,146 +475,6 @@ table th {
 
 .themeButton:hover {
   font-weight: bold;
-}
-
-/* Small Screens */
-@media only screen and (max-width: 400px) {
-  .applicationLink {
-    display: none;
-  }
-}
-.floatingLabelInputContainer {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-.floatingLabelInputContainer.small label {
-  font-size: 0.8em;
-  line-height: 0.8;
-  transform: translate(0, 18px) scale(1);
-  left: 0.8em;
-}
-.floatingLabelInputContainer.small input {
-  height: 1.6em;
-  padding: 1.5em 1em 0.25em 1em;
-  font-size: 0.8em;
-  line-height: 0.8;
-}
-.floatingLabelInputContainer.small .filled, .floatingLabelInputContainer.small:focus-within label {
-  transform: translate(0, 12px) scale(0.8);
-  color: var(--color-accent);
-}
-.floatingLabelInputContainer label {
-  position: absolute;
-  pointer-events: none;
-  transform: translate(0, 23px) scale(1);
-  transform-origin: top left;
-  transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
-  font-size: 1em;
-  line-height: 1;
-  left: 1em;
-}
-.floatingLabelInputContainer .filled, .floatingLabelInputContainer:focus-within label {
-  transform: translate(0, 12px) scale(0.8);
-  color: var(--color-accent);
-}
-.floatingLabelInputContainer input {
-  height: 2em;
-  padding: 1.5em 1em 0.25em 1em;
-  font-size: 1em;
-  line-height: 1;
-  transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
-}
-
-.loadingBarContainer {
-  height: 0.3em;
-  border-radius: 0.4em;
-  min-width: 10em;
-  width: 100%;
-  overflow: hidden;
-}
-
-.loadingBarBackground {
-  height: 100%;
-  border-radius: 0.4em;
-  background-color: var(--color-primary);
-  opacity: 0.2;
-  min-width: 10em;
-  width: 100%;
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-.loadingBarValue {
-  width: 100%;
-  height: 100%;
-  border-radius: 0.4em;
-  background-color: var(--color-accent);
-  animation: indeterminateAnimation 1s infinite ease-in-out;
-  animation-direction: alternate;
-  transform-origin: 0% 50%;
-  position: relative;
-  top: -0.3em;
-  left: 0;
-}
-
-.statusMessage .result {
-  font-size: 1.2em;
-  font-weight: 600;
-  color: var(--color-accent);
-  margin: 0;
-}
-.statusMessage .message {
-  margin-top: 0;
-}
-
-.statusMessageContainer {
-  margin: 0.5em 0;
-  min-width: 18.75em;
-}
-
-@keyframes indeterminateAnimation {
-  0% {
-    transform: translateX(-15%) scaleX(0.25);
-  }
-  100% {
-    transform: translateX(90%) scaleX(0.55);
-  }
-}
-.dropboxContainer {
-  width: 100%;
-  border: 0.1em solid var(--color-accent);
-  border-radius: 0.4em;
-  margin: 0.4em;
-}
-.dropboxContainer .dropboxHeader {
-  font-size: 1.2em;
-  padding: 0.4em 0.6em;
-  font-weight: bold;
-  color: var(--color-accent);
-  position: relative;
-}
-.dropboxContainer .dropboxHeader::before {
-  content: ""; /* Create a pseudo-element */
-  position: absolute; /* Position the pseudo-element absolutely */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-background);
-  filter: brightness(0.5);
-  opacity: 0.4; /* Apply opacity to the pseudo-element */
-  z-index: 0;
-}
-.dropboxContainer .dropboxHeader * {
-  position: relative;
-  z-index: 1;
-}
-.dropboxContainer .dropboxContent {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
 }
 
 #appBar {

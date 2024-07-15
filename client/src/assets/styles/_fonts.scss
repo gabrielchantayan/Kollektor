@@ -1,0 +1,84 @@
+// ███████╗░█████╗░███╗░░██╗████████╗░██████╗
+// ██╔════╝██╔══██╗████╗░██║╚══██╔══╝██╔════╝
+// █████╗░░██║░░██║██╔██╗██║░░░██║░░░╚█████╗░
+// ██╔══╝░░██║░░██║██║╚████║░░░██║░░░░╚═══██╗
+// ██║░░░░░╚█████╔╝██║░╚███║░░░██║░░░██████╔╝
+// ╚═╝░░░░░░╚════╝░╚═╝░░╚══╝░░░╚═╝░░░╚═════╝░
+
+:root {
+	font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+	:root {
+		font-family: 'InterVariable', sans-serif;
+		font-optical-sizing: auto;
+	}
+}
+
+@font-face {
+	font-family: InterVariable;
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('fonts/InterVariable.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: InterVariable;
+	font-style: italic;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('fonts/InterVariable-Italic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: GeistMono;
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('fonts/GeistMonoVF.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: DejaVuSansMono;
+	font-style: normal;
+	// font-weight: 100 900;
+	// font-display: swap;
+	src: url('fonts/DejaVuSansMono.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: LibreCaslonCondensed;
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('fonts/LibreCaslonCondensed.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: Texturina;
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('fonts/Texturina.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: PoltawskiNowy;
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('fonts/PoltawskiNowy.woff2') format('woff2');
+}
+
+$sansFontStack: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Roboto, sans-serif;
+// $serifFontStack:  'Iowan Old Style', 'Apple Garamond', Baskerville, 'Times New Roman', 'Droid Serif', Times, 'Source Serif Pro', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+// $monoFontStack:  DejaVuSansMono, ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono', 'Oxygen Mono',
+// 	'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+
+$interFontStack: InterVariable, $sansFontStack;
+// $calsonFontStack: LibreCaslonCondensed, $serifFontStack;
+// $geistFontStack: GeistMono, $monoFontStack;
+
+$mainFont: var(--font-stack), $interFontStack;
