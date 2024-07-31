@@ -40,6 +40,10 @@ const router = createBrowserRouter([
 				path: '*',
 				element: <pages.Error404 />,
 			},
+			{
+				path: 'login',
+				element: <pages.Login />,
+			}
 		],
 	},
 ]);

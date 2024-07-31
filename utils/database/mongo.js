@@ -6,9 +6,11 @@ const db_url = 'mongodb://127.0.0.1:27017/';
 
 const client = new MongoClient(db_url);
 
-const dbName = 'testDB';
+const dbName = 'kollektor';
 
 await client.connect();
+
+
 /**
  * Insert data into a collection
  * @param {String} collectionName The collection name you want to insert to

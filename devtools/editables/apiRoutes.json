@@ -31,5 +31,42 @@
 			"primaryFunctionFile": "utils/misc/update.js",
 			"primaryFunction": "checkForUpdates"
 		}
+	},
+	"collections": {
+		"getCollections": {
+			"name": "Get collections",
+			"description": "Gets all collections",
+			"type": "GET",
+			"primaryFunctionFile": "utils/collections/collections.js",
+			"primaryFunction": "getCollections"
+		},
+		"getCollection": {
+			"name": "Get collection",
+			"description": "Gets a collection",
+			"type": "GET",
+			"primaryFunctionFile": "utils/collections/collections.js",
+			"primaryFunction": "getCollection"
+		},
+		"createCollection": {
+			"name": "Create collection",
+			"description": "Creates a collection",
+			"type": "POST",
+			"primaryFunctionFile": "utils/collections/collections.js",
+			"primaryFunction": "createCollection"
+		},
+		"updateCollection": {
+			"name": "Update collection",
+			"description": "Updates a collection",
+			"type": "POST",
+			"primaryFunctionFile": "utils/collections/collections.js",
+			"primaryFunction": "updateCollection"
+		},
+		"deleteCollection": {
+			"name": "Delete collection",
+			"description": "Deletes a collection",
+			"type": "POST",
+			"primaryFunctionFile": "utils/collections/collections.js",
+			"primaryFunction": "deleteCollection"
+		}
 	}
 }

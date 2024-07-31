@@ -11,17 +11,19 @@ import { SortableItem } from './SortableItem.js';
 
 /**
  * Component for adding and reordering collection fields.
- * @param {Object} fieldData - The field data object.
- * @param {Function} handleSetFieldData - The function to set field data.
+ * @param {Object} props - The component props.
+ * @param {Object} props.fieldData - The field data object.
+ * @param {Function} props.handleSetFieldData - The function to set field data.
  * @returns {React.Component} The AddCollectionFieldsContainer component.
  */
 export default function AddCollectionFieldsContainer({ fieldData, handleSetFieldData }) {
 	// State for storing the items in the list
 
-
 	// Set up the sensors for drag and drop functionality
+	// PointerSensor for mouse or touch input
+	// KeyboardSensor for keyboard input
 	const sensors = useSensors(
-		useSensor(PointerSensor), // Sensor for pointer input (mouse or touch)
+		useSensor(PointerSensor),
 		useSensor(KeyboardSensor, {
 			coordinateGetter: sortableKeyboardCoordinates, // Coordinate getter for keyboard input
 		})
@@ -33,10 +35,9 @@ export default function AddCollectionFieldsContainer({ fieldData, handleSetField
 	 * @param {Object} event - The drag end event.
 	 */
 	const handleDragEnd = (event) => {
-		console.log(fieldData);
-
 		const { active, over } = event;
 
+		// If the active item and over item are different, update the field data
 		if (active.id !== over.id) {
 			handleSetFieldData((fieldData) => {
 				const oldIndex = fieldData.indexOf(active.id);
@@ -47,19 +48,24 @@ export default function AddCollectionFieldsContainer({ fieldData, handleSetField
 		}
 	};
 
-
-	// TODO
-	// Function called handleFieldUpdate taking the arguments "key" and "value"
-	// It finds the index of the item in the fieldData array and updates the value of the item with the new value
+	/**
+	 * Updates a field in the field data array.
+	 * @param {string} uuid - The UUID of the field.
+	 * @param {string} type - The type of the field.
+	 * @param {any} value - The new value of the field.
+	 */
 	const handleFieldUpdate = (uuid, type, value) => {
 		handleSetFieldData((fieldData) => {
 			const index = fieldData.findIndex((item) => item.uuid === uuid);
-			console.log(index);
 			fieldData[index][type] = value;
 			return fieldData;
 		});
-	}
+	};
 
+	/**
+	 * Removes a field from the field data array.
+	 * @param {string} uuid - The UUID of the field.
+	 */
 	const handleRemoveField = (uuid) => {
 		handleSetFieldData((fieldData) => {
 			return fieldData.filter((item) => item.uuid !== uuid);
@@ -67,6 +73,7 @@ export default function AddCollectionFieldsContainer({ fieldData, handleSetField
 	};
 
 	return (
+		// Context for drag and drop functionality
 		<DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
 			{/* Context for sorting */}
 			<SortableContext items={fieldData} strategy={verticalListSortingStrategy}>

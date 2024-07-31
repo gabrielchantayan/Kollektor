@@ -14,12 +14,16 @@
 	height: 100%;
 	border-radius: $borderRadius;
 	background-color: var(--color-primary);
-	opacity: 0.2;
+	opacity: 0.1;
 	min-width: 10em;
 	width: 100%;
 	position: relative;
 	top: 0;
 	left: 0;
+
+	&.primary {
+		background-color: var(--color-primary);
+	}
 }
 
 .loadingBarValue {
@@ -33,6 +37,10 @@
 	position: relative;
 	top: -0.3em;
 	left: 0;
+
+	&.primary {
+		background-color: var(--color-primary);
+	}
 }
 
 .statusMessage {

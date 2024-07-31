@@ -22,6 +22,7 @@
 		"saveCollection": "Enregistrer la collection",
 		"fields": "Champs",
 		"columnName": "Nom de colonne",
+		"dataType": "Type de donnée",
 		"dataType_date": "Date",
 		"dataType_number": "Nombre",
 		"dataType_text": "Texte",
@@ -33,7 +34,17 @@
 		"dataType_boolean": "Booleen",
 		"selectDataType": "Sélectionner le type de donnée",
 		"updateAvailable": "Une mise à jour est disponible ({{old}} -> {{new}})",
-		"placeholder_itemName" : "Nom",
-		"placeholder_purchasePrice" : "Prix d'achat"
+		"placeholder_itemName": "Nom",
+		"placeholder_purchasePrice": "Prix d'achat",
+		"statusMessageSuccess": "Succès",
+		"statusMessageError": "Erreur",
+		"username" : "Nom d'utilisateur",
+		"password" : "Mot de passe",
+		"error_fillFieldNames": "Veuillez remplir les noms de tous les champs",
+		"error_fillFieldDataTypes": "Veuillez sélectionner un type de donnée pour tous les champs",
+		"error_addFields": "Veuillez ajouter au moins un champ",
+		"error_fillCollectionName": "Veuillez remplir le nom de la collection",
+		"error_fillCollectionSlug": "Veuillez remplir le slug de la collection",
+		"error_incorrectCredentials": "Nom d'utilisateur ou mot de passe incorrect"
 	}
 }

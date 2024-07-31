@@ -12,13 +12,13 @@ import { t } from '../../assets/js/locale';
  * @param {string} props.message - The message to display.
  * @return {JSX.Element} The rendered status message component.
  */
-const StatusMessage = ({ loading = false, showMessage = false, showHeader = true, success = false, message }) => (
+const StatusMessage = ({ loading = false, showMessage = false, showHeader = true, success = false, message, color='accent' }) => (
 	<div className='statusMessageContainer'>
 		{/* Loading bar */}
 		{loading && (
 			<div className='loadingBarContainer'>
-				<div className='loadingBarBackground'></div>
-				<div className='loadingBarValue'></div>
+				<div className={`loadingBarBackground ${color}`}></div>
+				<div className={`loadingBarValue ${color}`}></div>
 			</div>
 		)}
 

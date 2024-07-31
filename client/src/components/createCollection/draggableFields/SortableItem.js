@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 import { Icon } from '@iconify/react';
-
 import { t } from '../../../assets/js/locale';
 import DataTypeSelection from '../../fragments/selections/DataTypeSelection';
 
+/**
 /**
  * SortableItem component.
  *
@@ -17,15 +17,27 @@ import DataTypeSelection from '../../fragments/selections/DataTypeSelection';
  * @return {ReactElement} The rendered SortableItem component.
  */
 export function SortableItem(props) {
+	// State hooks to manage the column name and selected data type
 	const [value, setValue] = useState(props.data.name);
-
 	const [selectedDataType, setSelectedDataType] = useState(props.data.dataType);
 
+	/**
+	 * Handles the change event of the data type selection.
+	 * Updates the selected data type and calls the handleFieldUpdate function.
+	 *
+	 * @param {Object} e - The event object.
+	 */
 	const handleDataTypeChange = (e) => {
 		setSelectedDataType(e.target.value);
 		props.handleFieldUpdate(props.uuid, 'dataType', e.target.value);
 	};
 
+	/**
+	 * Handles the change event of the column name input.
+	 * Updates the column name and calls the handleFieldUpdate function.
+	 *
+	 * @param {Object} e - The event object.
+	 */
 	const handleColumnNameChange = (e) => {
 		setValue(e.target.value);
 		props.handleFieldUpdate(props.uuid, 'name', e.target.value);
@@ -60,6 +72,7 @@ export function SortableItem(props) {
 			{/* Render the content */}
 			<div className='draggableFieldContent'>
 				<div className='draggableField'>
+					{/* Render the column name input */}
 					<input
 						className='small'
 						type='text'
@@ -67,6 +80,7 @@ export function SortableItem(props) {
 						value={value}
 						onChange={handleColumnNameChange}
 					/>
+					{/* Render the data type selection */}
 					<DataTypeSelection
 						selectedDataType={selectedDataType}
 						handleDataTypeChange={handleDataTypeChange}

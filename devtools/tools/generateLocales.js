@@ -46,6 +46,7 @@ const main = async () => {
 			}
 		}
 	};
+	
 
 	let localeList = await readdir('localization/locales'); // A list of all locales
 	let localeData = {}; // An object of each locale

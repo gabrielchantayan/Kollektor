@@ -16,4 +16,8 @@ select {
 
 	-webkit-appearance: none;
 	-moz-appearance: none;
+
+	&:invalid {
+		color: var(--color-accent);
+	}
 }

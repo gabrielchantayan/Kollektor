@@ -1,5 +1,13 @@
 import { copyFile, readdir } from 'fs/promises';
 import * as logger from '../../utils/misc/logger.js';
+import * as db from '../../utils/database/mongo.js';
+
+const initializeDatabase = async () => {
+	logger.logDB('Initializing database...');
+	await db.createCollection('collections');
+	logger.logDB('Finished initializing database.');
+};
+
 
 const initialize = async () => {
 	logger.log('Initializing server...');
