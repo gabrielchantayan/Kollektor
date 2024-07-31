@@ -107,3 +107,47 @@ const checkVersion = (currentVersion, newVersion) => {
 const checkForUpdates = async () 
  ``` 
 
+
+
+## COLLECTIONS
+
+### Get collections
+
+Gets all collections
+
+**Type**: GET
+
+**Call**: `/api/collections/getCollections`
+
+### Get collection
+
+Gets a collection
+
+**Type**: GET
+
+**Call**: `/api/collections/getCollection`
+
+### Create collection
+
+Creates a collection
+
+**Type**: POST
+
+**Call**: `/api/collections/createCollection`
+
+### Update collection
+
+Updates a collection
+
+**Type**: POST
+
+**Call**: `/api/collections/updateCollection`
+
+### Delete collection
+
+Deletes a collection
+
+**Type**: POST
+
+**Call**: `/api/collections/deleteCollection`
+
