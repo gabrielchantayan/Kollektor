@@ -1,12 +1,14 @@
-@import "_variables.scss";
-@import "_fonts.scss";
+@import '_variables.scss';
+@import '_fonts.scss';
 
-
-@import "components/_modal.scss";
-@import "components/_floatingLabelInput.scss";
-@import "components/_statusMessage.scss";
-@import "components/_dropBox.scss";
-
+@import 'components/_modal.scss';
+@import 'components/_floatingLabelInput.scss';
+@import 'components/_statusMessage.scss';
+@import 'components/_dropBox.scss';
+@import 'components/_draggableField.scss';
+@import 'components/_input.scss';
+@import 'components/_select.scss';
+@import 'components/_button.scss';
 
 // ██████╗░░█████╗░░██████╗███████╗    ██╗░░██╗████████╗███╗░░░███╗██╗░░░░░
 // ██╔══██╗██╔══██╗██╔════╝██╔════╝    ██║░░██║╚══██╔══╝████╗░████║██║░░░░░
@@ -71,47 +73,7 @@ input {
 	line-height: inherit;
 }
 
-button {
-	background-color: var(--color-primary);
-	color: var(--color-background);
-	border: $accentBorder;
-	border-radius: $borderRadius;
-	padding: 0.8em 1.2em;
-	margin: 0.5em 0;
-	// height: 2em;
-	// width: 100%;
-	font-family: inherit;
-	font-size: 0.9em;
-	font-weight: 600;
-	text-transform: uppercase;
-	cursor: inherit;
-	line-height: inherit;
 
-	// transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
-	transition: 150ms ease-out 0ms;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	.startIcon,
-	.endIcon {
-		font-size: 1em;
-		padding-top: 0.1em;
-	}
-
-	.startIcon {
-		margin-right: 0.4em;
-	}
-
-	.endIcon {
-		margin-left: 0.4em;
-	}
-
-	&:hover {
-		filter: brightness(75%);
-	}
-}
 
 table {
 	border: 1px solid var(--color-accent);
@@ -206,8 +168,6 @@ table {
 	}
 }
 
-
-
 // ▀█▀ █░█ █▀▀ █▀▄▀█ █▀▀ █▀
 // ░█░ █▀█ ██▄ █░▀░█ ██▄ ▄█
 
@@ -228,11 +188,6 @@ table {
 .themeButton:hover {
 	font-weight: bold;
 }
-
-
-
-
-
 
 //
 //

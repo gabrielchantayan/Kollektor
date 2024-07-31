@@ -293,6 +293,117 @@
   transition: max-height 0.5s ease-in-out;
 }
 
+.draggableField {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 0.2em;
+}
+.draggableField .draggableFieldControls {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+}
+.draggableField .draggableFieldControls .draggableFieldControl {
+  height: 2em;
+  width: 1.4em;
+  padding-top: 0.5em;
+  color: var(--color-accent);
+  transition: 70ms ease-in-out;
+}
+.draggableField .draggableFieldControls .draggableFieldControl * {
+  font-size: 1.2em;
+}
+.draggableField .draggableFieldControls .draggableFieldControl:hover {
+  color: var(--color-primary);
+}
+.draggableField .draggableFieldControls .draggableFieldControl.close:hover {
+  color: crimson;
+}
+.draggableField .draggableFieldContent > * > * {
+  margin-left: 0.5em;
+}
+
+input {
+  height: 2em;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  line-height: 1;
+}
+input.small {
+  height: 1.6em;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+  line-height: 0.8;
+}
+
+select {
+  height: 2em;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  line-height: 1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+select.small {
+  height: 2.75em;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+  line-height: 0.8;
+}
+
+button {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  border-radius: 0.4em;
+  font-family: inherit;
+  text-transform: uppercase;
+  cursor: inherit;
+  line-height: inherit;
+  transition: 150ms ease-out 0ms;
+  padding: 0.8em 1.2em;
+  margin: 0.5em 0;
+  font-size: 0.9em;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button.color_accent {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  border: 0.1em solid var(--color-primary);
+}
+button.color_accent:hover {
+  filter: brightness(200%);
+}
+button.noBorder {
+  border: none;
+}
+button.small {
+  padding: 0.8em 0.8em;
+  font-size: 0.8em;
+}
+button .startIcon,
+button .endIcon {
+  font-size: 1em;
+  padding-top: 0.1em;
+}
+button .startIcon {
+  margin-right: 0.4em;
+}
+button .endIcon {
+  margin-left: 0.4em;
+}
+button:hover {
+  filter: brightness(75%);
+}
+
 body {
   font-family: var(--font-stack), InterVariable, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, sans-serif;
   background-color: var(--color-background);
@@ -342,39 +453,6 @@ input {
   font-size: inherit;
   cursor: inherit;
   line-height: inherit;
-}
-
-button {
-  background-color: var(--color-primary);
-  color: var(--color-background);
-  border: 0.1em solid var(--color-accent);
-  border-radius: 0.4em;
-  padding: 0.8em 1.2em;
-  margin: 0.5em 0;
-  font-family: inherit;
-  font-size: 0.9em;
-  font-weight: 600;
-  text-transform: uppercase;
-  cursor: inherit;
-  line-height: inherit;
-  transition: 150ms ease-out 0ms;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-button .startIcon,
-button .endIcon {
-  font-size: 1em;
-  padding-top: 0.1em;
-}
-button .startIcon {
-  margin-right: 0.4em;
-}
-button .endIcon {
-  margin-left: 0.4em;
-}
-button:hover {
-  filter: brightness(75%);
 }
 
 table {

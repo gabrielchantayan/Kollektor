@@ -19,45 +19,7 @@ const getCookie = (key) => {
 
 // import * as locale from './localeManager.js'; // Import Locale manager
 
-// Date function for main page
-const date = () => {
-	let currentDate = new Date();
-	let dateOptions = {
-		weekday: 'long',
-		year: 'numeric',
-		month: 'long',
-		day: 'numeric',
-	};
 
-	// Set date to locale
-	// const loc = await locale.getLocale();
-	const loc = getLocale();
-
-	let date = currentDate.toLocaleDateString(loc, dateOptions);
-	return date;
-};
-
-const greet = () => {
-	let currentTime = new Date();
-	let greet = Math.floor(currentTime.getHours() / 3);
-	switch (greet) {
-		case 7:
-		case 8:
-		case 0:
-		case 1:
-			return 'goodNight';
-		case 2:
-		case 3:
-			return 'goodMorning';
-		case 4:
-		case 5:
-			return 'goodAfternoon';
-		case 6:
-			return 'goodEvening';
-		default:
-			return 'Hello!';
-	}
-};
 
 /**
  *
@@ -102,11 +64,6 @@ const isValidUrl = (urlString) => {
 };
 
 
-const getDefault = (value) => {
-	
-
-}
-
 const setDefault = async (key, value) => {
 	
 	await post(['options', 'updateOptions'], { key: key, value: value });
@@ -120,4 +77,28 @@ let init = async () => {
 
 init ();
 
-export { getCookie, greet, makeFile, date, stripProtocol, isValidUrl, setDefault, defaultConfig };
+/**
+ * Convert a string to a URL slug.
+ *
+ * @param {string} str - The string to convert.
+ * @return {string} The converted URL slug.
+ */
+const toURLSlug = (str) => {
+  // Convert the string to a string.
+  // Trim any leading or trailing whitespace.
+  // Normalize the string using the 'NFD' normalization form.
+  // Remove any characters with diacritical marks.
+  // Replace any characters that are not alphanumeric or hyphens with hyphens.
+  // Convert the string to lowercase.
+  return str
+    .toString()
+    .trim()
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-zA-Z0-9]/g, '-')
+    .toLowerCase();
+}
+
+
+
+export { getCookie, makeFile, stripProtocol, isValidUrl, setDefault, toURLSlug, defaultConfig };

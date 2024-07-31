@@ -1,5 +1,5 @@
 import React from 'react';
-import { getLocales } from '../../assets/js/locale';
+import { getLocales } from '../../../assets/js/locale';
 
 export default function LanguageSelection({handleLanguageChange, selectedLang}) {
 

@@ -16,7 +16,7 @@
 		"generateAPI": "node ./devtools/tools/generateAPI.js",
 		"generateLocales": "node ./devtools/tools/generateLocales.js",
 		"generateAPIDocs": "node ./devtools/tools/generateAPIDocs.js",
-		"genAll" : "npm run generateAPI && npm run generateLocales && npm run generateAPIDocs"
+		"genAll": "npm run generateAPI && npm run generateLocales && npm run generateAPIDocs"
 	},
 	"dependencies": {
 		"axios": "^0.27.2",
