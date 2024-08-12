@@ -417,6 +417,35 @@ button:hover {
   filter: brightness(75%);
 }
 
+#appBar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 0.4em 0.6em;
+  background-color: var(--color-background);
+  border-bottom: 0.1em solid var(--color-accent);
+  display: flex;
+  justify-content: space-between;
+}
+#appBar #appTitle {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+#appBar #appTitle h1 {
+  margin: 0 0 0 0.2em;
+  font-size: 1.2em;
+}
+#appBar #accountButton {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+#appBar #accountButton h1 {
+  margin: 0 0.6em 0 0;
+  font-size: 1em;
+}
+
 body {
   font-family: var(--font-stack), InterVariable, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, sans-serif;
   background-color: var(--color-background);
@@ -575,24 +604,6 @@ table th {
 
 .themeButton:hover {
   font-weight: bold;
-}
-
-#appBar {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  padding: 0.4em 0.6em;
-  background-color: var(--color-background);
-  border-bottom: 0.1em solid var(--color-accent);
-}
-#appBar #appTitle {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-}
-#appBar #appTitle h1 {
-  margin: 0;
-  font-size: 1.2em;
 }
 
 .iconTextContainer {

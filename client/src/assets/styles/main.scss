@@ -9,6 +9,7 @@
 @import 'components/_input.scss';
 @import 'components/_select.scss';
 @import 'components/_button.scss';
+@import 'components/_appbar.scss';
 
 // ██████╗░░█████╗░░██████╗███████╗    ██╗░░██╗████████╗███╗░░░███╗██╗░░░░░
 // ██╔══██╗██╔══██╗██╔════╝██╔════╝    ██║░░██║╚══██╔══╝████╗░████║██║░░░░░
@@ -201,25 +202,7 @@ table {
 //
 //
 
-#appBar {
-	position: sticky;
-	top: 0;
-	z-index: 1;
-	padding: 0.4em 0.6em;
-	background-color: var(--color-background);
-	border-bottom: $accentBorder;
 
-	#appTitle {
-		display: flex;
-		justify-content: left;
-		align-items: center;
-
-		h1 {
-			margin: 0;
-			font-size: $fontSizeH2;
-		}
-	}
-}
 
 .iconTextContainer {
 	display: flex;

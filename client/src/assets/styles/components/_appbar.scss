@@ -1,0 +1,33 @@
+#appBar {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	padding: 0.4em 0.6em;
+	background-color: var(--color-background);
+	border-bottom: $accentBorder;
+
+    display: flex;
+    justify-content: space-between;
+
+	#appTitle {
+		display: flex;
+		justify-content: left;
+		align-items: center;
+
+		h1 {
+			margin: 0 0 0 0.2em;
+			font-size: $fontSizeH2;
+		}
+	}
+
+	#accountButton {
+		display: flex;
+		justify-content: right;
+		align-items: center;
+
+		h1 {
+			margin: 0 0.6em 0 0;
+			font-size: $fontSizeH3;
+		}
+	}
+}
