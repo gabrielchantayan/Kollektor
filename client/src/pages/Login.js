@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getLocale, t } from '../assets/js/locale.js';
 import { applyFont, applyTheme } from '../assets/js/themes.js';
+import { post } from '../assets/js/api.js';
 import { toURLSlug } from '../assets/js/utils.js';
 import AddCollectionFieldsContainer from '../components/createCollection/draggableFields/AddCollectionFieldsContainer.js';
 import Button from '../components/fragments/Button.js';
@@ -24,9 +25,34 @@ export default function Login() {
 		setPassword(value);
 	};
 
-	const handleLogin = (e) => {
+	const handleLogin = async (e) => {
 		e.preventDefault();
+
+		
+		setShowMessage(false);
+		setSuccess(false);
 		setLoading(true);
+		
+
+		// Contact the server
+		const ret = await post(['accounts', 'login'], {
+			username: username,
+			password: password
+		})
+
+		setLoading(false);
+
+		if (ret.success) {
+			// window.location = '/';
+		}
+		else {
+			setShowMessage(true);
+			setSuccess(false);
+			setMessage(ret.message);
+		}
+
+
+
 	};
 	
 		useEffect(() => {

@@ -8,6 +8,7 @@
 	"entries": {
 		"kollektor": "Kollektor",
 		"login": "Login",
+		"logout" : "Logout",
 		"addCollection": "Add Collection",
 		"editCollection": "Edit Collection",
 		"deleteCollection": "Delete Collection",

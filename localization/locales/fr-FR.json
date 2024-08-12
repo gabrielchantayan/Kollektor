@@ -9,6 +9,7 @@
 	"entries": {
 		"kollektor": "Kollektor",
 		"login": "Connexion",
+		"logout" : "Deconnexion",
 		"addCollection": "Ajouter une collection",
 		"editCollection": "Modifier la collection",
 		"deleteCollection": "Supprimer la collection",
